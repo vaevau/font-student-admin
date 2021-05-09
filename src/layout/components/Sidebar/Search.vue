@@ -1,7 +1,6 @@
 <template>
   <div class="demo-input-size">
     <el-input
-
       v-model="input1"
       size="medium"
       placeholder="搜索菜单"
@@ -28,7 +27,7 @@ export default {
 <style lang="scss">
 
     .demo-input-size {
-      width: 200px;
+      width: 92%;
       height: 40px;
       margin: 20px auto;
          .el-input__inner{
