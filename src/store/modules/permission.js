@@ -50,9 +50,11 @@ const actions = {
   generateRoutes({ commit }, roles) {
     return new Promise(resolve => {
       let accessedRoutes
+      // 若果是管理员，则返回所有路由
       if (roles.includes('admin')) {
         accessedRoutes = asyncRoutes || []
       } else {
+        // 如果不是管理员，则返回此角色对应的路由
         accessedRoutes = filterAsyncRoutes(asyncRoutes, roles)
       }
       commit('SET_ROUTES', accessedRoutes)
